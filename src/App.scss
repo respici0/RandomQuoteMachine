@@ -13,20 +13,29 @@ $colors: (
 
 $font: "Sniglet", cursive;
 
-* {
-  margin: 0;
-  padding: 0;
+
+body {
+  font-family: $font;
 }
 
-.App {
+
+#root {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: colors(primaryColor);
-  font-family: $font;
   height: 100vh;
+  background: colors(primaryColor);
 }
+
+
+// .App {
+//   // display: flex;
+//   // flex-direction: column;
+//   // justify-content: center;
+//   // align-items: center;
+ 
+// }
 
 #quote-box {
   position: relative;
@@ -71,5 +80,11 @@ $font: "Sniglet", cursive;
       color: colors(accentOne);
       font-size: 15px;
     }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #quote-box  {
+    transform: scale(0.6);
   }
 }

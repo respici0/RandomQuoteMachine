@@ -56,36 +56,36 @@ class App extends Component {
     let author = this.state.author;
     return (
       <React.Fragment>
-        <div className="App">
-          <div id="quote-box">
-            <div id="text">
-              <p><i className="fas fa-quote-left"></i> {chosenQuote} <i className="fas fa-quote-right"></i></p>
-            </div>
-            <div id="author">
-              <p><strong>-{author}</strong></p>
-            </div>
-            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${chosenQuote}" -${author}`} target="_block">  <button
-              type="button"
-              className="btn btn-primary"
-            ><i className="fab fa-twitter" /></button></a>
-            <button
-              type="button"
-              className="btn btn-success"
-              id="new-quote"
-              onClick={this.quoteButtonClick}
-            >
-              New quote
+        {/* <div className="App"> */}
+        <div id="quote-box">
+          <div id="text">
+            <p><i className="fas fa-quote-left"></i> {chosenQuote} <i className="fas fa-quote-right"></i></p>
+          </div>
+          <div id="author">
+            <p><strong>-{author}</strong></p>
+          </div>
+          <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${chosenQuote}" -${author}`} target="_block">  <button
+            type="button"
+            className="btn btn-primary"
+          ><i className="fab fa-twitter" /></button></a>
+          <button
+            type="button"
+            className="btn btn-success"
+            id="new-quote"
+            onClick={this.quoteButtonClick}
+          >
+            New quote
             </button>
-          </div>
-          <div className="footer">
-            <p>
-              Created by{" "}
-              <a href="https://robertpaulrespicio.com/" target="_block">
-                Respici0
-              </a>
-            </p>
-          </div>
         </div>
+        <div className="footer">
+          <p>
+            Created by{" "}
+            <a href="https://robertpaulrespicio.com/" target="_block">
+              Respici0
+              </a>
+          </p>
+        </div>
+        {/* </div> */}
       </React.Fragment>
     );
   }
